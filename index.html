@@ -1,0 +1,237 @@
+<!--AWANG ZAFRAN HAZIQ-->
+<!--20DIT25F1114-->
+
+<!--KHAIRI HARIRI-->
+<!--20DIT25F1106-->
+
+<!--BERNARD NGELANA-->
+<!--20DIT25F1003-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarawak Tour Package Booking System</title>
+
+    <!-- jQuery Mobile CSS & JS Libraries -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SECTION 1: HOME PAGE -->
+    <div data-role="page" id="home">
+
+        <div data-role="header" data-theme="b">
+            <h1>Sarawak Tourism</h1>
+            <a href="#contactPopup" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-right ui-corner-all ui-icon-mail ui-btn-icon-left">Contact Us</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="hero">
+                <h1>Explore Sarawak</h1>
+                <p>Discover amazing places, nature, and rich cultures in Kuching, Bako & Mulu.</p>
+                <a href="#packages" class="ui-btn ui-btn-inline ui-corner-all" data-transition="slide">View Tour Packages</a>
+            </div>
+
+            <h3 class="text-center margin-top-25">Why Choose Us?</h3>
+
+            <div data-role="collapsible" data-theme="a">
+                <h4>Easy Online Booking</h4>
+                <p>Book your holiday package directly through your mobile browser with ease.</p>
+            </div>
+
+            <div data-role="collapsible" data-theme="a">
+                <h4>Top Destinations</h4>
+                <p>Visit world-famous heritage sites like Bako National Park and Mulu Caves.</p>
+            </div>
+        </div>
+
+        <!-- MODAL-BASED CONTACT US POPUP -->
+        <div data-role="popup" id="contactPopup" data-overlay-theme="b" data-theme="a" data-dismissible="true" class="ui-corner-all popup-box">
+            <div data-role="header" data-theme="b">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="ui-content">
+                <form id="contactForm">
+                    <label for="contactName">Name <span class="required">*</span></label>
+                    <input type="text" id="contactName" placeholder="Enter your name">
+                    <div id="contactNameError" class="error"></div>
+
+                    <label for="contactEmail">Email <span class="required">*</span></label>
+                    <input type="email" id="contactEmail" placeholder="example@email.com">
+                    <div id="contactEmailError" class="error"></div>
+
+                    <label for="contactMessage">Message <span class="required">*</span></label>
+                    <textarea id="contactMessage" placeholder="Type your inquiry..."></textarea>
+                    <div id="contactMessageError" class="error"></div>
+
+                    <!-- Ethical Consent Checkbox -->
+                    <label>
+                        <input type="checkbox" id="contactConsent"> I agree to the privacy policy & responsible use of my data. <span class="required">*</span>
+                    </label>
+                    <div id="contactConsentError" class="error"></div>
+
+                    <button type="submit" class="ui-btn ui-btn-b ui-corner-all">Send Message</button>
+                    <div id="contactSuccess" class="success">Message submitted successfully!</div>
+                </form>
+            </div>
+        </div>
+
+        <div data-role="footer">
+            <h4>Sarawak Tourism Board © 2026</h4>
+        </div>
+    </div>
+
+
+    <!-- SECTION 2: TOUR PACKAGES PAGE -->
+    <div data-role="page" id="packages">
+
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+            <h1>Tour Packages</h1>
+            <a href="#booking" data-transition="slide" class="ui-btn ui-icon-check ui-btn-icon-right">Book</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+
+            <!-- PACKAGE 1 -->
+            <div class="package-card">
+                <div class="package-content">
+                    <img src="img/bako.webp" height="250" width="350">
+                    <h2>Bako National Park Tour</h2>
+
+                    <!-- Tooltip for Duration -->
+                    <p>
+                        <strong>Duration:</strong> 
+                        <span title="3 Days 2 Nights All-Inclusive" class="tooltip-text">3 Days 2 Nights ℹ️</span>
+                    </p>
+
+                    <!-- Tooltip for Price -->
+                    <p class="price">
+                        <span title="RM450 per pax inclusive of boat guide">RM 450 / person ℹ️</span>
+                    </p>
+
+                    <!-- Popover for Package Details -->
+                    <a href="#bakoPopover" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-mini ui-corner-all">Package Details</a>
+                    <a href="#booking" data-transition="slide" class="ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Popover Content for Package 1 -->
+            <div data-role="popup" id="bakoPopover" class="ui-content popover-box" data-theme="a">
+                <h3>Bako Tour Information</h3>
+                <p><strong>Destinations:</strong> Bako National Park Peninsula, Telok Pandan Kecil Beach.</p>
+                <p><strong>Activities:</strong> Wildlife viewing (Proboscis Monkeys), Jungle Trekking, Boat Rides.</p>
+                <p><strong>Facilities:</strong> Licensed Tour Guide, Park Permit, Airport Transport & Lodging.</p>
+            </div>
+
+
+            <!-- PACKAGE 2 -->
+            <div class="package-card">
+                <div class="package-content">
+                    <img src="img/kuch.jpg" height="250" width="350">
+                    <h2>Mulu Caves Adventure</h2>
+
+                    <!-- Tooltip for Duration -->
+                    <p>
+                        <strong>Duration:</strong> 
+                        <span title="4 Days 3 Nights Expedition" class="tooltip-text">4 Days 3 Nights ℹ️</span>
+                    </p>
+
+                    <!-- Tooltip for Price -->
+                    <p class="price">
+                        <span title="RM750 per pax inclusive of internal flight link & permits">RM 750 / person ℹ️</span>
+                    </p>
+
+                    <!-- Popover for Package Details -->
+                    <a href="#muluPopover" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-mini ui-corner-all">Package Details</a>
+                    <a href="#booking" data-transition="slide" class="ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Popover Content for Package 2 -->
+            <div data-role="popup" id="muluPopover" class="ui-content popover-box" data-theme="a">
+                <h3>Mulu Adventure Information</h3>
+                <p><strong>Destinations:</strong> Deer Cave, Lang Cave, Clear Water Cave & Wind Cave.</p>
+                <p><strong>Activities:</strong> Bat Exodus, Cave Exploration, Canopy Walkway & Hiking.</p>
+                <p><strong>Facilities:</strong> English-Speaking Guide, Accommodation, Boat Transfers & Entry Permits.</p>
+            </div>
+
+        </div>
+
+        <div data-role="footer">
+            <h4>Sarawak Tourism Board © 2026</h4>
+        </div>
+    </div>
+
+
+    <!-- SECTION 3: BOOKING FORM PAGE -->
+    <div data-role="page" id="booking">
+
+        <div data-role="header" data-theme="b">
+            <a href="#packages" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-back ui-btn-icon-left">Back</a>
+            <h1>Booking Form</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <h2>Book Your Tour Package</h2>
+
+            <form id="bookingForm">
+
+                <label for="bookingName">Full Name <span class="required">*</span></label>
+                <input type="text" id="bookingName" placeholder="Enter full name">
+                <div id="bNameError" class="error"></div>
+
+                <label for="bookingPhone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="bookingPhone" placeholder="e.g. 0123456789">
+                <div id="bPhoneError" class="error"></div>
+
+                <label for="bookingEmail">Email Address <span class="required">*</span></label>
+                <input type="email" id="bookingEmail" placeholder="example@email.com">
+                <div id="bEmailError" class="error"></div>
+
+                <label for="travelDate">Travel Date <span class="required">*</span></label>
+                <input type="date" id="travelDate">
+                <div id="bDateError" class="error"></div>
+
+                <label for="participants">Number of Participants <span class="required">*</span></label>
+                <input type="number" id="participants" min="1" value="1">
+                <div id="bPartError" class="error"></div>
+
+                <label for="packageOption">Select Tour Package <span class="required">*</span></label>
+                <select id="packageOption">
+                    <option value="">-- Choose Package --</option>
+                    <option value="Bako National Park">Bako National Park (RM450/pax)</option>
+                    <option value="Mulu Caves Adventure">Mulu Caves Adventure (RM750/pax)</option>
+                </select>
+                <div id="bPkgError" class="error"></div>
+
+                <!-- Ethical Consent Checkbox -->
+                <label>
+                    <input type="checkbox" id="bookingConsent"> I agree to the privacy and responsible-use terms. <span class="required">*</span>
+                </label>
+                <div id="bConsentError" class="error"></div>
+
+                <button type="submit" class="ui-btn ui-btn-b ui-corner-all">Confirm Booking</button>
+                <div id="bookingSuccess" class="success">Booking submitted successfully! We will contact you soon.</div>
+            </form>
+        </div>
+
+        <div data-role="footer">
+            <h4>Sarawak Tourism Board © 2026</h4>
+        </div>
+    </div>
+
+    <!-- External JavaScript File (Diletakkan di bawah sebelum </body>) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
